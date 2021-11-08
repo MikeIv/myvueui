@@ -1,0 +1,49 @@
+@import 'src/assets/styles/tools/_mixins.scss';
+
+body {
+  font-family: 'GR', sans-serif;
+}
+
+.page {
+  max-width: rem(1440);
+  margin: 0 auto;
+  margin-top: rem(52);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: rem(16);
+  padding-bottom: rem(16);
+  background-color: var(--color-white);
+  @include b-shadow;
+  &__logo {
+    position: absolute;
+    top: calc(50% - rem(10));
+    left: rem(24);
+
+    width: auto;
+    height: rem(20);
+  }
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__nav-item {
+    margin-left: rem(8);
+    margin-right: rem(8);
+    text-decoration: none;
+    font-size: rem(18);
+    color: var(--color-darkvue);
+    &:hover {
+      color: var(--color-warning);
+    }
+  }
+}

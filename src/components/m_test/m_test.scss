@@ -1,5 +1,8 @@
+@import 'src/assets/styles/tools/_mixins.scss';
+
 .m_test {
   &__p {
     color: var(--color-orange);
+    font-size: rem(24);
   }
 }

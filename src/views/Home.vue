@@ -1,15 +1,14 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+  <div class="home page">
     <MTest />
   </div>
 </template>
 
 <script>
-import MTest from '@/components/m_test/m_test'
+import MTest from '@/components/m_test/m_test';
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     MTest,
   },

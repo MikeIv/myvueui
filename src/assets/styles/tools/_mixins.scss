@@ -1,0 +1,11 @@
+//Функции для работы с компонентнами
+@use 'sass:math';
+
+@function rem($px) {
+  @return math.div($px, 16) + rem;
+}
+
+// Box-shadow
+@mixin b-shadow ($v:"1px", $bl:"4px") {
+  box-shadow: 0 #{$v} #{$bl} 0 rgba(0, 0, 0, 0.1);
+}

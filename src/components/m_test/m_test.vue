@@ -3,13 +3,11 @@
 </template>
 
 <script>
-import './m_test.scss'
+import './m_test.scss';
 
 export default {
-  name: "m_test"
+  name: 'm_test',
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
