@@ -2,10 +2,9 @@
   <div id="app">
     <header class="header">
       <img alt="Vue logo" src="@/assets/logo.png" class="header__logo" />
-      <div class="header__nav">
-        <router-link to="/" class="header__nav-item">{{ mainPage }}</router-link>
-        <router-link to="/other" class="header__nav-item">{{ secondPage }}</router-link>
-      </div>
+      <nav class="header__nav" v-for="link in links" :key="link.title">
+        <router-link :to="link.url" :title="link.title" class="header__nav-item">{{ link.title }}</router-link>
+      </nav>
     </header>
     <router-view />
   </div>
@@ -16,6 +15,10 @@ export default {
   data: () => ({
     mainPage: 'Base',
     secondPage: 'Разное',
+    links: [
+      { title: 'Base', url: '/' },
+      { title: 'Other', url: '/other' },
+    ],
   }),
 };
 </script>

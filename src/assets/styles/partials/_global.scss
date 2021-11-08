@@ -41,9 +41,14 @@ body {
     margin-right: rem(8);
     text-decoration: none;
     font-size: rem(18);
-    color: var(--color-darkvue);
+    color: var(--color-vue);
     &:hover {
       color: var(--color-warning);
     }
   }
+}
+
+.router-link-exact-active {
+  color: var(--color-darkvue);
+  text-decoration: underline;
 }
