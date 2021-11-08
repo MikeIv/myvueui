@@ -1,5 +1,5 @@
 <template>
-  <p class="m_test__p">Тест</p>
+  <p class="m_test__p">Домашняя страница</p>
 </template>
 
 <script>
