@@ -1,0 +1,25 @@
+@import 'src/assets/styles/tools/_mixins.scss';
+
+.a-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(16);
+  font-weight: bold;
+  line-height: rem(28);
+  border: none;
+  border-radius: rem(4);
+  cursor: pointer;
+
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  // Size
+  &--xlarge {
+
+  }
+}
