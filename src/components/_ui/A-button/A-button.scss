@@ -1,5 +1,3 @@
-@import 'src/assets/styles/tools/_mixins.scss';
-
 .a-button {
   display: flex;
   justify-content: center;
@@ -8,7 +6,7 @@
   font-weight: bold;
   line-height: rem(28);
   border: none;
-  border-radius: rem(4);
+  border-radius: var(--a-borderRadius--default);
   cursor: pointer;
 
   &__label {
@@ -19,7 +17,66 @@
   }
 
   // Size
-  &--xlarge {
+  &--large {
+    height: rem(44);
+    & .a-button__label {
+      padding-right: rem(32);
+      padding-left: rem(32);
+    }
+  }
+  &--medium {
+    height: rem(38);
+    & .a-button__label {
+      padding-right: rem(24);
+      padding-left: rem(24);
+    }
+  }
+  &--small {
+    height: rem(30);
+    & .a-button__label {
+      padding-right: rem(24);
+      padding-left: rem(24);
+    }
+  }
 
+  // bgColor & condition
+  &.disabled,
+  &:disabled {
+    background-color: hsl(var(--color-gray_HSL), calc(80% - 5%));
+    cursor: auto;
+  }
+
+  &--accent {
+    color: var(--color-white);
+    background-color: var(--color-red);
+    &:hover {
+      background-color: hsl(var(--color-red_HSL), calc(65% - 5%));
+    }
+    &.active,
+    &:active {
+      background-color: hsl(var(--color-red_HSL), calc(65% - 10%));
+    }
+  }
+  &--primary {
+    color: var(--color-white);
+    background-color: var(--color-darkvue);
+    &:hover {
+      background-color: hsl(var(--color-darkvue_HSL), calc(50% - 5%));
+    }
+    &.active,
+    &:active {
+      background-color: hsl(var(--color-darkvue_HSL), calc(65% - 10%));
+    }
+  }
+  &--secondary {
+    color: var(--color-white);
+    background-color: var(--color-warning);
+    &:hover {
+      background-color: hsl(var(--color-warning_HSL), calc(70% - 5%));
+    }
+    &.active,
+    &:active {
+      background-color: hsl(var(--color-warning_HSL), calc(65% - 10%));
+    }
   }
 }

@@ -1,3 +1,4 @@
+@import 'src/assets/styles/tools/_functions.scss';
 @import 'src/assets/styles/tools/_mixins.scss';
 
 body {
@@ -51,4 +52,8 @@ body {
 .router-link-exact-active {
   color: var(--color-darkvue);
   text-decoration: underline;
+}
+
+.wrapper {
+
 }

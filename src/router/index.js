@@ -15,6 +15,11 @@ const routes = [
     name: 'Other',
     component: () => import('@/views/Other.vue'),
   },
+  {
+    path: '/atoms',
+    name: 'Atoms',
+    component: () => import('@/views/Atoms.vue'),
+  },
 ];
 
 const router = new VueRouter({

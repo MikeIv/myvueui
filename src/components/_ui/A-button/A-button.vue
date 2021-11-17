@@ -1,5 +1,10 @@
 <template>
-  <button :class="classes" :disabled="disabled" @click.prevent.stop="onClickBtn">
+  <button
+    :class="classes"
+    :disabled="disabled"
+    :style="{ width: btnWidth + 'px', height: btnHeight + 'px' }"
+    @click.prevent.stop="onClickBtn"
+  >
     <i :class="icons"></i>
     <span class="a-button__label">{{ label }}</span>
   </button>
@@ -14,28 +19,29 @@ export default {
     label: {
       type: String,
     },
-    disabled: {
-      type: Boolean,
-      required: false,
-    },
     size: {
       type: String,
       validator(value) {
-        return ['xlarge', 'large', 'medium', 'small'].includes(value);
+        return ['large', 'medium', 'small'].includes(value);
       },
     },
     bgColor: {
       type: String,
       validator(value) {
-        return (
-          ['accent', 'primary', 'secondary', 'ghost-accept', 'ghost-primary', 'none', 'custom'].indexOf(value) !== -1
-        );
+        return ['accent', 'primary', 'secondary', 'ghost-accept', 'ghost-primary', 'none', 'custom'].includes(value);
       },
     },
+    btnWidth: {
+      type: String,
+    },
+    btnHeight: {
+      type: String,
+    },
+    disabled: {
+      type: Boolean,
+      required: false,
+    },
   },
-  data: () => ({
-  }),
-
   methods: {
     onClickBtn() {
       this.$emit('click');
@@ -62,5 +68,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss"></style>

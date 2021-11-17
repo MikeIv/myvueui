@@ -2,12 +2,25 @@
   // Базовые цвета
   --color-black: #2e4455;
   --color-white: #fff;
+
+  --color-gray: #C1C1C1;
+  --color-gray_HSL: 213, 5%;
+  --color-midgray: #939393;
+  --color-darkgray: #757575;
+
   --color-orange: #ffcd83;
   --color-red: #D92323;
+  --color-red_HSL: 0, 100%;
   --color-blue: #2981D9;
   --color-green: #4CAF50;
   --color-gold: #FFC700;
-  --color-warning: #E28229;
+  --color-warning: #f58d2c;
+  --color-warning_HSL: 29, 95%;
   --color-vue: #41B883;
   --color-darkvue: #2b9264;
+  --color-darkvue_HSL: 153, 54%;
+
+  // Скругления
+  --a-borderRadius--default: 4px; //Радиус скругления для элементов (карточек, кнопок)
+  --a-borderRadius--bg: 10px; //Радиус скругления для фона
 }

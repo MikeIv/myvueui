@@ -1,0 +1,41 @@
+@import 'src/assets/styles/tools/_functions.scss';
+
+.atoms {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: rem(40);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 100%;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: rem(16);
+  }
+  &__info-cel {
+    display: flex;
+    align-items: center;
+  }
+  &__info-title {
+    margin-right: rem(8);
+    color: var(--color-darkvue);
+  }
+  &__info-description {
+    color: var(--color-warning);
+  }
+}

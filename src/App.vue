@@ -18,6 +18,7 @@ export default {
     links: [
       { title: 'Base', url: '/' },
       { title: 'Other', url: '/other' },
+      { title: 'Atoms', url: '/atoms' },
     ],
   }),
 };
