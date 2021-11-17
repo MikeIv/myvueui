@@ -15,9 +15,9 @@
 
   &_h1 {
     @include unify-parent('h1') {
-      font-size: rem(44);
+      font-size: rem(34);
       font-weight: 600;
-      line-height: rem(52);
+      line-height: rem(44);
 
       @media screen and (max-width: 767px) {
         font-size: rem(28);
@@ -28,9 +28,9 @@
 
   &_h2 {
     @include unify-parent('h2') {
-      font-size: rem(40);
+      font-size: rem(28);
       font-weight: 600;
-      line-height: rem(48);
+      line-height: rem(36);
 
       @media screen and (max-width: 767px) {
         font-size: rem(26);
@@ -41,9 +41,9 @@
 
   &_h3 {
     @include unify-parent('h3') {
-      font-size: rem(36);
+      font-size: rem(24);
       font-weight: 600;
-      line-height: rem(44);
+      line-height: rem(32);
 
       @media screen and (max-width: 767px) {
         font-size: rem(24);
@@ -54,9 +54,9 @@
 
   &_h4 {
     @include unify-parent('h4') {
-      font-size: rem(32);
+      font-size: rem(21);
       font-weight: 600;
-      line-height: rem(40);
+      line-height: rem(28);
 
       @media screen and (max-width: 767px) {
         font-size: rem(22);

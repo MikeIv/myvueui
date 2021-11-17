@@ -28,7 +28,7 @@ export default {
     bgColor: {
       type: String,
       validator(value) {
-        return ['accent', 'primary', 'secondary', 'ghost-accept', 'ghost-primary', 'none', 'custom'].includes(value);
+        return ['accent', 'primary', 'secondary'].includes(value);
       },
     },
     btnWidth: {

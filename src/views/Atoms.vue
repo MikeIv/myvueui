@@ -1,6 +1,7 @@
 <template>
   <div class="page">
     <section class="atoms">
+      <h1 class="v-hidden">Базовые компоненты</h1>
       <ul class="atoms__list">
         <li class="atoms__item">
           <div class="atoms__info">
@@ -27,6 +28,10 @@ export default {
     btnProps: [
       { title: 'label', description: 'Название кнопки' },
       { title: 'size', description: 'large, medium, small' },
+      { title: 'bgColor', description: 'accent, primary, secondary' },
+      { title: 'btnWidth', description: 'произвольная ширина (100) в px' },
+      { title: 'btnHeight', description: 'произвольная высота (40) в px' },
+      { title: 'disabled', description: 'disabled – неактивное состояние' },
     ],
   }),
 };

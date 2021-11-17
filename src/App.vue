@@ -17,7 +17,7 @@ export default {
     secondPage: 'Разное',
     links: [
       { title: 'Base', url: '/' },
-      { title: 'Other', url: '/other' },
+      { title: 'Demo', url: '/demo' },
       { title: 'Atoms', url: '/atoms' },
     ],
   }),
