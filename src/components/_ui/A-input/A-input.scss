@@ -19,4 +19,13 @@
     color: var(--color-darkgray);
     line-height: rem(16);
   }
+  &--large {
+    height: rem(48);
+  }
+  &--medium {
+    height: rem(44);
+  }
+  &--small {
+    height: rem(40);
+  }
 }

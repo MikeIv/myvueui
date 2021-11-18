@@ -19,7 +19,7 @@
               <span class="atoms__info-description a-font_m bold">{{ inp.description }}</span>
             </div>
           </div>
-          <AInput label="ФИО" placeholder="Пелевин Виктор" inputHeight="40" v-model="value" />
+          <AInput label="ФИО" placeholder="Пелевин Виктор"  v-model="value" size="large" />
         </li>
       </ul>
     </section>
@@ -46,6 +46,7 @@ export default {
     inputProps: [
       { title: 'label', description: 'Label у input' },
       { title: 'placeholder', description: 'placeholder' },
+      { title: 'size', description: 'large, medium, small' },
       { title: 'inputHeight', description: 'произвольная высота (40) в px' },
       { title: 'disabled', description: 'input неактивный' },
     ],
