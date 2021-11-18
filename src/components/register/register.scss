@@ -2,6 +2,8 @@
 .register {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
   max-width: rem(500);
   margin: 0 auto;
@@ -9,5 +11,18 @@
 
   &__h3 {
     margin: 0 auto;
+    margin-bottom: rem(12);
+  }
+  &__link {
+    margin-bottom: rem(12);
+    cursor: pointer;
+    & a {
+      text-decoration: none;
+      color: var(--color-blue);
+    }
+  }
+
+  &__form-group {
+    border: none;
   }
 }

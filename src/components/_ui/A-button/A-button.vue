@@ -14,7 +14,7 @@
 import './A-button.scss';
 
 export default {
-  name: 'A-button',
+  name: 'a-button',
   props: {
     label: {
       type: String,

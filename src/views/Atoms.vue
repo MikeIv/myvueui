@@ -12,6 +12,15 @@
           </div>
           <AButton label="Кнопка" size="small" bgColor="secondary" btnWidth="150" btnHeight="40" />
         </li>
+        <li class="atoms__item">
+          <div class="atoms__info">
+            <div class="atoms__info-cel" v-for="inp in inputProps" :key="inp.title">
+              <p class="atoms__info-title a-font_l bold">{{ inp.title }}:</p>
+              <span class="atoms__info-description a-font_m bold">{{ inp.description }}</span>
+            </div>
+          </div>
+          <AInput label="ФИО" placeholder="Пелевин Виктор" inputHeight="40" v-model="value" />
+        </li>
       </ul>
     </section>
   </div>
@@ -19,11 +28,12 @@
 
 <script>
 import AButton from '@/components/_ui/A-button/A-button';
+import AInput from '@/components/_ui/A-input/A-input';
 import '@/assets/styles/pages/_atoms.scss';
 
 export default {
   name: 'Atoms',
-  components: { AButton },
+  components: { AButton, AInput },
   data: () => ({
     btnProps: [
       { title: 'label', description: 'Название кнопки' },
@@ -33,6 +43,12 @@ export default {
       { title: 'btnHeight', description: 'произвольная высота (40) в px' },
       { title: 'disabled', description: 'disabled – неактивное состояние' },
     ],
+    inputProps: [
+      { title: 'label', description: 'Label у инпута' },
+      { title: 'placeholder', description: 'placeholder' },
+      { title: 'inputHeight', description: 'произвольная высота (40) в px' },
+    ],
+    value: '',
   }),
 };
 </script>

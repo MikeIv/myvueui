@@ -1,0 +1,22 @@
+@import 'src/assets/styles/tools/_functions.scss';
+
+.a-input {
+  width: 100%;
+  padding: 0 rem(16);
+  color: var(--color-darkgray);
+  box-sizing: border-box;
+  border: rem(1) solid var(--color-gray);
+  border-radius: var(--a-borderRadius--default);
+  outline: none;
+  font-size: rem(14);
+
+  &__label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-bottom: rem(4);
+    padding: 0;
+    color: var(--color-darkgray);
+    line-height: rem(16);
+  }
+}
