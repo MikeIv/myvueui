@@ -44,9 +44,10 @@ export default {
       { title: 'disabled', description: 'disabled – неактивное состояние' },
     ],
     inputProps: [
-      { title: 'label', description: 'Label у инпута' },
+      { title: 'label', description: 'Label у input' },
       { title: 'placeholder', description: 'placeholder' },
       { title: 'inputHeight', description: 'произвольная высота (40) в px' },
+      { title: 'disabled', description: 'input неактивный' },
     ],
     value: '',
   }),
