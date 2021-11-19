@@ -8,7 +8,7 @@
       VALIDATOR ERRORS
       <form class="register__form" @submit.prevent="onSubmit">
         <fieldset class="register__form-group">
-          <AInput label="ФИО"  type="text" placeholder="ФИО" inputHeight="35" v-model="value.name" />
+          <AInput label="ФИО" type="text" placeholder="ФИО" inputHeight="35" v-model="value.name" />
           <p>{{ value.name }}</p>
         </fieldset>
         <fieldset class="register__form-group">
@@ -19,7 +19,15 @@
           <AInput label="Password" type="password" placeholder="Password" inputHeight="35" v-model="value.pass" />
           <p>{{ value.pass }}</p>
         </fieldset>
-        <AButton label="Отправить" size="small" bgColor="secondary" btnWidth="150" btnHeight="40" />
+        <AButton
+          label="Отправить"
+          size="small"
+          bgColor="secondary"
+          btnWidth="150"
+          btnHeight="40"
+          class="button"
+          @click="onSubmit"
+        />
       </form>
     </section>
   </div>
@@ -35,7 +43,18 @@ export default {
   components: { AInput, AButton },
   props: {},
   data: () => ({
-    value: [{ name: ''}, {email: ''}, {pass: ''}],
+    value: [{ name: '' }, { email: '' }, { pass: '' }],
   }),
+  methods: {
+    onSubmit() {
+      console.log('subbmitted form');
+    },
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+.button {
+  margin: 0 auto;
+}
+</style>

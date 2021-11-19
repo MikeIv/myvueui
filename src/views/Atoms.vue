@@ -19,7 +19,7 @@
               <span class="atoms__info-description a-font_m bold">{{ inp.description }}</span>
             </div>
           </div>
-          <AInput label="ФИО" placeholder="Пелевин Виктор"  v-model="value" size="large" />
+          <AInput label="ФИО" placeholder="Пелевин Виктор" v-model="value" size="large" />
         </li>
       </ul>
     </section>
