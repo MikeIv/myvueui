@@ -3,7 +3,7 @@
     <label v-if="label" :class="typelabel">{{ label }}</label>
     <div class="a-input__row">
       <input
-        type="text"
+        :type="type"
         ref="a-input"
         class="a-input"
         :class="classes"
@@ -36,7 +36,7 @@ export default {
   }),
   props: {
     value: {
-      type: String,
+      type: Object,
     },
     label: {
       type: String,

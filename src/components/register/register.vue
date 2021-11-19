@@ -8,24 +8,34 @@
       VALIDATOR ERRORS
       <form class="register__form" @submit.prevent="onSubmit">
         <fieldset class="register__form-group">
-          <AInput label="ФИО" placeholder="test" inputHeight="30" v-model="value" />
-          <p>{{ value }}</p>
+          <AInput label="ФИО"  type="text" placeholder="ФИО" inputHeight="35" v-model="value.name" />
+          <p>{{ value.name }}</p>
         </fieldset>
+        <fieldset class="register__form-group">
+          <AInput label="Email" placeholder="Email" inputHeight="35" v-model="value.email" />
+          <p>{{ value.email }}</p>
+        </fieldset>
+        <fieldset class="register__form-group">
+          <AInput label="Password" type="password" placeholder="Password" inputHeight="35" v-model="value.pass" />
+          <p>{{ value.pass }}</p>
+        </fieldset>
+        <AButton label="Отправить" size="small" bgColor="secondary" btnWidth="150" btnHeight="40" />
       </form>
     </section>
   </div>
 </template>
 
 <script>
+import AButton from '@/components/_ui/A-button/A-button';
 import AInput from '@/components/_ui/A-input/A-input';
 import './register.scss';
 
 export default {
   name: 'register',
-  components: { AInput },
+  components: { AInput, AButton },
   props: {},
   data: () => ({
-    value: '',
+    value: [{ name: ''}, {email: ''}, {pass: ''}],
   }),
 };
 </script>
