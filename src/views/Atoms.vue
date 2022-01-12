@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import AButton from '@/components/_ui/A-button/A-button';
-import AInput from '@/components/_ui/A-input/A-input';
+import AButton from '@/components/_ui/a_button/a_button';
+import AInput from '@/components/_ui/a_input/a_input';
 import '@/assets/styles/pages/_atoms.scss';
 
 export default {
@@ -52,5 +52,8 @@ export default {
     ],
     value: '',
   }),
+
+  methods: {
+  },
 };
 </script>

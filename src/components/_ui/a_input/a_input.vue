@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import './A-input.scss';
+import './a_input.scss';
 
 export default {
   name: 'a-input',
@@ -36,7 +36,7 @@ export default {
   }),
   props: {
     value: {
-      type: Object,
+      type: String,
     },
     label: {
       type: String,

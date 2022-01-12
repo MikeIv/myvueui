@@ -12,7 +12,12 @@
           <p>{{ value.name }}</p>
         </fieldset>
         <fieldset class="register__form-group">
-          <AInput label="Email" placeholder="Email" inputHeight="35" v-model="value.email" />
+          <AInput
+            label="Email"
+            placeholder="Email"
+            inputHeight="35"
+            v-model="value.email"
+          />
           <p>{{ value.email }}</p>
         </fieldset>
         <fieldset class="register__form-group">
@@ -27,27 +32,35 @@
           btnHeight="40"
           class="button"
           @click="onSubmit"
+          :disabled="isSubmitting"
         />
+        <pre>{{ isSubmitting }}</pre>
       </form>
     </section>
   </div>
 </template>
 
 <script>
-import AButton from '@/components/_ui/A-button/A-button';
-import AInput from '@/components/_ui/A-input/A-input';
+import AButton from '@/components/_ui/a_button/a_button';
+import AInput from '@/components/_ui/a_input/a_input';
 import './register.scss';
 
 export default {
-  name: 'register',
+  name: 'MvuRegister',
   components: { AInput, AButton },
   props: {},
   data: () => ({
     value: [{ name: '' }, { email: '' }, { pass: '' }],
   }),
+  computed: {
+    isSubmitting() {
+      return this.$store.state.auth.isSubmitting
+    }
+  },
   methods: {
     onSubmit() {
       console.log('subbmitted form');
+      this.$store.commit('registerStart')
     },
   },
 };

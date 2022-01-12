@@ -46,6 +46,11 @@
   &:disabled {
     background-color: hsl(var(--color-gray_HSL), calc(80% - 5%));
     cursor: auto;
+
+    &:hover {
+      background-color: hsl(var(--color-gray_HSL), calc(80% - 5%));
+      cursor: auto;
+    }
   }
 
   &--accent {

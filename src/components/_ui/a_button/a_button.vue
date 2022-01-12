@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import './A-button.scss';
+import './a_button.scss';
 
 export default {
   name: 'a-button',
