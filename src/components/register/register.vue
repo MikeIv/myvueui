@@ -9,7 +9,6 @@
       <form class="register__form" @submit.prevent="onSubmit">
         <fieldset class="register__form-group">
           <AInput label="ФИО" type="text" placeholder="ФИО" inputHeight="35" v-model="value.name" />
-          <p>{{ value.name }}</p>
         </fieldset>
         <fieldset class="register__form-group">
           <AInput
@@ -18,11 +17,9 @@
             inputHeight="35"
             v-model="value.email"
           />
-          <p>{{ value.email }}</p>
         </fieldset>
         <fieldset class="register__form-group">
           <AInput label="Password" type="password" placeholder="Password" inputHeight="35" v-model="value.pass" />
-          <p>{{ value.pass }}</p>
         </fieldset>
         <AButton
           label="Отправить"
@@ -60,7 +57,7 @@ export default {
   methods: {
     onSubmit() {
       console.log('subbmitted form');
-      this.$store.commit('registerStart')
+      this.$store.dispatch('register', {})
     },
   },
 };
