@@ -1,0 +1,15 @@
+@import 'src/assets/styles/tools/_functions.scss';
+
+.validationErrors {
+  display: flex;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style: none;
+  }
+  &__item {
+    color: var(--color-red);
+  }
+
+}

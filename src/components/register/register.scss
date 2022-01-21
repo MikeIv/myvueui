@@ -21,6 +21,10 @@
     }
   }
 
+  &__errors {
+    min-height: rem(60);
+  }
+
   &__form {
     display: flex;
     flex-wrap: wrap;

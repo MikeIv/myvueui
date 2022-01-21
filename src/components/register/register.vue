@@ -5,7 +5,9 @@
       <p class="register__link">
         <router-link :to="{ name: 'login' }" class="a-font_m bold">Зарегестрируйтесь</router-link>
       </p>
-      VALIDATOR ERRORS
+      <div class="register__errors">
+        <MvalidationErrors v-if="validationErrors" :validationErrors="validationErrors" />
+      </div>
       <form class="register__form" @submit.prevent="onSubmit">
         <fieldset class="register__form-group">
           <AInput label="ФИО" type="text" placeholder="ФИО" inputHeight="35" v-model="value.name" />
@@ -40,19 +42,23 @@
 <script>
 import AButton from '@/components/_ui/a_button/a_button';
 import AInput from '@/components/_ui/a_input/a_input';
+import MvalidationErrors from '@/components/_ui/m_validationErrors/m_validationErrors';
 import './register.scss';
 
 export default {
   name: 'MvuRegister',
-  components: { AInput, AButton },
+  components: { AInput, AButton, MvalidationErrors },
   props: {},
   data: () => ({
     value: [{ name: '' }, { email: '' }, { pass: '' }],
   }),
   computed: {
     isSubmitting() {
-      return this.$store.state.auth.isSubmitting
-    }
+      return this.$store.state.auth.isSubmitting;
+    },
+    validationErrors() {
+      return this.$store.state.auth.validationErrors;
+    },
   },
   methods: {
     onSubmit() {
