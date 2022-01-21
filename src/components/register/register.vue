@@ -57,7 +57,12 @@ export default {
   methods: {
     onSubmit() {
       console.log('subbmitted form');
-      this.$store.dispatch('register', {})
+      this.$store.dispatch('register',
+        {email: this.value.email, username: this.value.name, password: this.value.pass})
+      .then(user => {
+        console.log('successfully', user);
+        this.$router.push({name: 'home'})
+      })
     },
   },
 };
