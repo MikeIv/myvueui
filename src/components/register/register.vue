@@ -43,6 +43,7 @@
 import AButton from '@/components/_ui/a_button/a_button';
 import AInput from '@/components/_ui/a_input/a_input';
 import MvalidationErrors from '@/components/_ui/m_validationErrors/m_validationErrors';
+import {actionType} from "@/store/modules/auth";
 import './register.scss';
 
 export default {
@@ -63,7 +64,7 @@ export default {
   methods: {
     onSubmit() {
       console.log('subbmitted form');
-      this.$store.dispatch('register',
+      this.$store.dispatch(actionType.register,
         {email: this.value.email, username: this.value.name, password: this.value.pass})
       .then(user => {
         console.log('successfully', user);
