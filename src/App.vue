@@ -19,6 +19,7 @@ export default {
       { title: 'Base', url: '/' },
       { title: 'Demo', url: '/demo' },
       { title: 'Atoms', url: '/atoms' },
+      { title: 'FAQ', url: '/faq' },
     ],
   }),
 };
